@@ -1,0 +1,5 @@
+python chapter_split.py -f /convertfiles/TV/TheMickS01E10TheBaggage.mp4
+
+ffmpeg -f concat -safe 0 -i /convertfiles/TV/concat.txt -c copy output.mp4
+
+ffmpeg -f concat -safe 0 -i /convertfiles/TV/concat.txt -c:v libx264 -c:a aac -b:a 128k /convertfiles/TV/output_1.mkv
