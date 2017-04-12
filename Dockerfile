@@ -31,6 +31,6 @@ RUN set -x \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD chapter_split.py /tmp/chapter_split.py
-#CMD ["python", "/tmp/chapter_split.py", "-f", "/convertfiles/input.mp4"]
+CMD ["python", "/tmp/chapter_split.py", "-f", "/convertfiles/input.mp4"]
 
 #filebot -rename convertfiles/output --db TheTVDB --format {n} - {s00e00} - {t} --action move --conflict override
